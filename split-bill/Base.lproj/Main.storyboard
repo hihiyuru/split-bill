@@ -247,7 +247,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="allDelet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKn-9e-bHa"/>
+                                    <action selector="clearAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ld-6O-w8g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Al-IT-nMe">
@@ -259,7 +259,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbs-hj-hWb"/>
+                                    <action selector="onClickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tJ-xZ-IZI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXg-Kc-ZvW">
@@ -272,7 +272,7 @@
                                     <imageReference key="image" image="delete.left" catalog="system" symbolScale="medium"/>
                                 </state>
                                 <connections>
-                                    <action selector="deletNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tWv-hN-v08"/>
+                                    <action selector="deleteNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bel-pj-Adh"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="QSe-dN-neH">
