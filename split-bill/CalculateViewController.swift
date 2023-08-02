@@ -15,6 +15,7 @@ class CalculateViewController: UIViewController {
     var isClear = false
     
     
+    @IBOutlet weak var tipsTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var splitButton: UIButton!
     @IBOutlet weak var personSlider: UISlider!
@@ -39,6 +40,7 @@ class CalculateViewController: UIViewController {
         // 初始化 Split 按鈕樣式
         splitButton.backgroundColor = UIColor(red: 15/255, green: 186/255, blue: 70/255, alpha: 1)
         selectedTagImageView[0].isHidden = false
+        tipsTextField.isHidden = true
     }
     
     func setupSlider() {
@@ -95,6 +97,7 @@ class CalculateViewController: UIViewController {
         titleLabel.text = "總額"
         hideSelectedTagImageViews()
         selectedTagImageView[0].isHidden = false
+        tipsTextField.isHidden = true
         isClear = false
     }
     
@@ -120,16 +123,21 @@ class CalculateViewController: UIViewController {
         switch sender.tag {
         case 0:
             selectedTagImageView[0].isHidden = false
+            percent = sender.tag
         case 5:
             selectedTagImageView[1].isHidden = false
+            percent = sender.tag
         case 10:
             selectedTagImageView[2].isHidden = false
-        case 20:
+            percent = sender.tag
+        case -1:
             selectedTagImageView[3].isHidden = false
+            tipsTextField.isHidden = false
         default:
             selectedTagImageView[0].isHidden = false
+            percent = sender.tag
         }
-        percent = sender.tag
+        
     }
     
     @IBAction func splitOrClear(_ sender: UIButton) {
@@ -168,7 +176,14 @@ class CalculateViewController: UIViewController {
         // 重置所有 UI
         resetUI()
     }
-    
+
+    @IBAction func typingPercent(_ sender: UITextField) {
+        if let percentText = sender.text {
+            percent = Int(percentText)!
+        } else {
+            percent = 0
+        }
+    }
     @IBAction func dismissKeyboard(_ sender: Any) {
         // 收起鍵盤
         view.endEditing(true)
